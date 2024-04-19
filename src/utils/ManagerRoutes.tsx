@@ -1,5 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Login } from "../pages/Login";
+import { Register } from "../pages/Register";
+
 import { AuthLayout } from "../layouts/AuthLayout";
 const ManagerRoutes = () => {
   return (
@@ -10,6 +12,14 @@ const ManagerRoutes = () => {
           element={
             <AuthLayout>
               <Login />
+            </AuthLayout>
+          }
+        />
+           <Route
+          path="/register"
+          element={
+            <AuthLayout>
+              <Register />
             </AuthLayout>
           }
         />
