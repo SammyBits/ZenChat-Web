@@ -1,17 +1,13 @@
 import { ReactNode } from "react";
-
+import '../../styles/common/Card.css'
 interface Props {
-  width: string;
-  height: string;
-  padding: string;
-  margin: string;
-  bgColor: string;
   children: ReactNode;
+  className?: string;
 }
 
-export const Card = ({width, height, bgColor, children, padding, margin}:Props) => {
+export const Card = ({children, className}:Props) => {
   return (
-    <div style={{ backgroundColor: bgColor, width, height, padding, margin }}>
+    <div className={className}>
       {children}
     </div>
   );
